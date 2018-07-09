@@ -6,6 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "cordova": {
+    "id": "cordova-plugin-talkingdata",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
   "keywords": [
     "TalkingData"
   ],
