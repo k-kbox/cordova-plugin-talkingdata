@@ -1,5 +1,5 @@
 {
-  "name": "appanalytics",
+  "name": "cordova-plugin-talkingdata",
   "version": "4.0.0",
   "description": "",
   "main": "TalkingData.js",
