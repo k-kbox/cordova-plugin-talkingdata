@@ -7,8 +7,8 @@ var TalkingData = {
     // 初始化 TalkingData Analytics SDK
     // appKey    : TalkingData appid, https://www.talkingdata.com/app/document_web/index.jsp?statistics
     // channelId : 渠道号
-    init:function(appKey, channelId) {
-        cordova.exec(null, null, "TalkingData", "init", [appKey, channelId]);
+    init:function(appKey, channelId, success, error) {
+        cordova.exec(success, error, "TalkingData", "init", [appKey, channelId]);
     },
 
     setAntiCheatingEnabled:function(enabled) {
@@ -53,24 +53,24 @@ var TalkingData = {
 
     // 触发自定义事件
     // eventId   : 自定义事件的 eventId
-    onEvent:function(eventId) {
-        cordova.exec(null, null, "TalkingData", "onEvent", [eventId]);
+    onEvent:function(eventId, success, error) {
+        cordova.exec(success, error, "TalkingData", "onEvent", [eventId]);
     },
 
     // 触发自定义事件
     // eventId   : 自定义事件的 eventId
     // eventLabel: 自定义事件的事件标签
-    onEventWithLabel:function(eventId, eventLabel) {
-        cordova.exec(null, null, "TalkingData", "onEventWithLabel", [eventId, eventLabel]);
+    onEventWithLabel:function(eventId, eventLabel, success, error) {
+        cordova.exec(success, error, "TalkingData", "onEventWithLabel", [eventId, eventLabel]);
     },
 
     // 触发自定义事件
     // eventId   : 自定义事件的 eventId
     // eventLabel: 自定义事件的事件标签
     // eventData : 自定义事件的数据，Json 对象格式
-    onEventWithParameters:function(eventId, eventLabel, eventData) {
+    onEventWithParameters:function(eventId, eventLabel, eventData, success, error) {
         var eventDataJson = JSON.stringify(eventData);
-        cordova.exec(null, null, "TalkingData", "onEventWithParameters", [eventId, eventLabel, eventDataJson]);
+        cordova.exec(success, error, "TalkingData", "onEventWithParameters", [eventId, eventLabel, eventDataJson]);
     },
 
     // 下单
