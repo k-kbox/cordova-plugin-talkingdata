@@ -69,7 +69,7 @@
 
     <!-- browser -->
     <platform name="browser">
-        <js-module src="www/browser/TalkingData.js" name="TalkingData">
+        <js-module src="www/browser/TalkingData.js" name="BrowserTalkingData">
             <clobbers target="TalkingData" />
         </js-module>
     </platform>
