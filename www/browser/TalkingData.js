@@ -5,7 +5,7 @@
 var TalkingData = {
 
     init:function(appKey, channelId, success, error) {
-      var name = document.getElementsByName("title")[0].text;
+      var name = document.getElementsByTagName("title")[0].text;
       var version = "0.0.1";
 
       var script=document.createElement("script");
